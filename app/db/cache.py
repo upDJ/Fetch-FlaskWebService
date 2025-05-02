@@ -1,0 +1,2 @@
+RECEIPT_DICT = {}
+RECEIPT_ID = "0"
