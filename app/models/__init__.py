@@ -1,2 +1,2 @@
-from .item import Item
-from .receipt import Receipt
+from .item_model import ItemModel
+from .receipt_model import ReceiptModel

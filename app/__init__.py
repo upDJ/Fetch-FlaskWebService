@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_pydantic_spec import FlaskPydanticSpec
 from app.routes import register_routes
-from app.routes import process_bp
+from app.routes import receipt_bp
 from app.routes import test_bp
 
 
@@ -15,7 +15,7 @@ def create_app():
     register_routes(api)
 
     # blueprint routes
-    app.register_blueprint(process_bp)
+    app.register_blueprint(receipt_bp)
     app.register_blueprint(test_bp)
 
     return app

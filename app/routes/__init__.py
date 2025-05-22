@@ -1,2 +1,2 @@
-from .process import register_routes, process_bp
+from .receipt import register_routes, receipt_bp
 from .test import test_bp

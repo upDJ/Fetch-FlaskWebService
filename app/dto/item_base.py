@@ -3,7 +3,7 @@ from pydantic import BaseModel, WithJsonSchema, Field
 from app.schema import API_DOC_DICT
 
 
-class Item(BaseModel):
+class ItemBase(BaseModel):
     short_description: Annotated[
         str,
         Field(strict=True, alias="shortDescription"),
