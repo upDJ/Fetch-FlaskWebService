@@ -21,7 +21,6 @@ class ReceiptRepository:
 
         receipt_dict["uid"] = uid
         print(receipt_dict)
-        breakpoint()
         receipt = ReceiptModel.model_validate(receipt_dict)
 
         return response_code, receipt

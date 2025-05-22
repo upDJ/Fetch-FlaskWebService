@@ -21,8 +21,8 @@ def client(app):
     return app.test_client()
 
 
-# seed db with a receipt
-def test_process_receipt(client):
+@pytest.fixture()
+def receipt_uid(client):  # seed db with a receipt
     payload = {
         "retailer": "M&M Corner Market",
         "purchaseDate": "2022-03-20",
@@ -37,11 +37,18 @@ def test_process_receipt(client):
     }
 
     response = client.post("/receipts/process", json=payload)
-    assert response.json["id"] == "1"
+    uid = response.json["id"]
+    return uid
 
 
-def test_get_points(client):
-    receipt_id = "1"
+def test_receipt_uid_not_null(receipt_uid):
+    assert receipt_uid is not None
 
-    response = client.get(f"receipts/{receipt_id}/points")
+
+def test_receipt_uid_is_string(receipt_uid):
+    assert type(receipt_uid) is str
+
+
+def test_get_points(client, receipt_uid):
+    response = client.get(f"receipts/{receipt_uid}/points")
     assert response.json["points"] == 109
