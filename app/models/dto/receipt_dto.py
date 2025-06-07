@@ -1,4 +1,4 @@
-from .receipt_base import ReceiptBase
+from app.models.base import ReceiptBase
 from app.schema import RECEIPT_SCHEMA
 
 

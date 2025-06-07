@@ -1,4 +1,4 @@
-from app.dto.item_base import ItemBase
+from app.models.base import ItemBase
 
 
 class ItemModel(ItemBase):

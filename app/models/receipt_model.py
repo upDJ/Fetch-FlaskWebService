@@ -2,7 +2,7 @@ from pydantic import Field
 import math
 import time
 
-from app.dto.receipt_base import ReceiptBase
+from app.models.base import ReceiptBase
 
 
 class ReceiptModel(ReceiptBase):

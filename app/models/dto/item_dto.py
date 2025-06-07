@@ -1,4 +1,4 @@
-from .item_base import ItemBase
+from app.models.base import ItemBase
 from app.schema import ITEM_SCHEMA
 
 
