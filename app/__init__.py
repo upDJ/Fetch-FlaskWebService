@@ -1,8 +1,8 @@
 from flask import Flask
 from flask_pydantic_spec import FlaskPydanticSpec
-from app.api import register_routes
-from app.api import receipt_bp
-from app.api import test_bp
+from .api import register_routes
+from .api import receipt_bp
+from .api import test_bp
 
 
 def create_app():
